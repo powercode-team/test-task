@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Tabs.css";
 
-import { withRouter, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // import gql from "graphql-tag";
 // import { graphql, compose } from "react-apollo";
 
@@ -98,4 +98,4 @@ class Tabs extends Component {
 
 // export default withRouter(TabsPageWidthGraphQL);
 
-export default withRouter(Tabs);
+export default Tabs;

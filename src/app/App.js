@@ -8,10 +8,16 @@ import { ApolloClient } from "apollo-client";
 import { HttpLink } from "apollo-link-http";
 import { InMemoryCache } from "apollo-cache-inmemory";
 
+import fetch from "node-fetch";
+import { createHttpLink } from "apollo-link-http";
+
 import Tabs from "./containers/Tabs/Tabs";
 import Header from "./components/Header/Header";
 
-const httpLink = new HttpLink({ uri: "https://api.graph.cool/simple/v1/cjdbkqnkc0ss701773x0kseto" });
+const httpLink = createHttpLink({
+    uri: "https://api.graph.cool/simple/v1/cjdbkqnkc0ss701773x0kseto",
+    fetch: fetch
+});
 
 const client = new ApolloClient({
     link: httpLink,

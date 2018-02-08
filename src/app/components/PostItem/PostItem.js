@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./PostItem.css";
 
 const PostItem = ({ img, name, description }) => {
@@ -6,7 +7,7 @@ const PostItem = ({ img, name, description }) => {
     const max = 1000;
     const min = 800;
     const randomWidth = Math.floor(Math.random() * (max - min) + min);
-    const imgUrl = `https://placeimg.com/${randomWidth}/600/any`;
+    const imgUrl = `${img}${randomWidth}/600/any`;
 
     return (
         <div
@@ -20,6 +21,12 @@ const PostItem = ({ img, name, description }) => {
             </div>
         </div>
     );
+};
+
+PostItem.propTypes = {
+    img: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired
 };
 
 export default PostItem;
