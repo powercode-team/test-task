@@ -1,0 +1,11 @@
+.wrapper-header {
+    background-color: #cc6699;
+    padding: 20px 0;
+}
+
+.wrapper-header .logo {
+    margin: 0;
+    font-family: "Amatic SC", cursive;
+    font-size: 32px;
+    color: #ffffff;
+}
